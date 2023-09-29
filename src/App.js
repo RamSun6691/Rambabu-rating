@@ -9,8 +9,8 @@ import Facebook from './Facebook/Facebook';
 function App() {
   return (
     <>
-    <Facebook />
-    {/* <Flipcart /> */}
+    {/* <Facebook /> */}
+    <Flipcart />
     {/* <Card /> */}
     {/* <BrowserRouter >
     <Routes>

@@ -1,0 +1,226 @@
+.flip {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin: 30px;
+    border: 2px solid black;
+    /* max-width: 1000px; */
+}
+.ratingtext {
+    color: lightgray;
+}
+.flipItem {
+    margin: 30px;
+}
+.flipItem1 {
+    display: flex;
+}
+
+/* h4 {
+    position: absolute;
+    width: inherit;
+    height: auto;
+    top: 100%;
+} */
+
+@property --progress-value {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  @keyframes battery-progress {
+    to { --progress-value: 92; }
+  }
+  
+  @keyframes Camera-progress {
+    to { --progress-value: 87; }
+  }
+  
+  @keyframes Display-progress {
+    to { --progress-value: 73; }
+  }
+  @keyframes Design-progress {
+    to { --progress-value: 80; }
+  }
+  
+  .progress-bar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+    /* to center the percentage value */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-bar::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+  }
+  
+  .battery {
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(rgb(105, 255, 128) calc(var(--progress-value) * 1%), rgb(181, 181, 181) 0);
+    animation: battery-progress 2s 1 forwards;
+  }
+  
+  .battery::before {
+    animation: battery-progress 2s 1 forwards;
+  }
+  
+  .Camera {
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0),
+      conic-gradient(rgb(105, 255, 128) calc(var(--progress-value) * 1%), rgb(181, 181, 181) 0);
+    animation: Camera-progress 2s 1 forwards;
+  }
+  
+  .Camera::before {
+    animation: Camera-progress 2s 1 forwards;
+  }
+  
+  .Display {
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0),
+      conic-gradient(rgb(105, 255, 128) calc(var(--progress-value) * 1%), rgb(181, 181, 181) 0);
+    animation: Display-progress 2s 1 forwards;
+  }
+  
+  .Display::before {
+    animation: Display-progress 2s 1 forwards;
+  }
+  .Design {
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0),
+      conic-gradient(rgb(105, 255, 128) calc(var(--progress-value) * 1%), rgb(181, 181, 181) 0);
+    animation: Design-progress 2s 1 forwards;
+  }
+  
+  .Design::before {
+    animation: Design-progress 2s 1 forwards;
+  }
+  
+  
+  
+  h4 {
+    text-align: center;
+  }
+  
+  progress {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+.progress-bar-container {
+    margin: 30px;
+}
+
+.progress1 {
+    background: lightgrey;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    /* padding: 0 5px; */
+    display: flex;
+    height: 10px;
+    width: 120px;
+    margin: 20px;
+  }
+  
+  .progress-value {
+    /* animation: load 3s normal forwards; */
+    
+   
+    border-radius: 100px;
+    /* background: green; */
+    height: 10px;
+    width: 0;
+  }
+  
+  @keyframes five {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+  .five {
+    background: 
+      /* radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0), */
+      conic-gradient(rgb(16, 154, 37) , rgb(34, 219, 17) 0);
+    animation: five 2s 1 forwards;
+  }
+  
+  .five::before {
+    animation: five 2s 1 forwards;
+  }
+  @keyframes four {
+    0% { width: 0; }
+    100% { width: 80%; }
+  }
+
+  .four {
+    background: 
+      /* radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0), */
+      conic-gradient(rgb(16, 154, 37) , rgb(34, 219, 17) 0);
+    animation: four 2s 1 forwards;
+  }
+  
+  .four::before {
+    animation: four 2s 1 forwards;
+  }
+  @keyframes three {
+    0% { width: 0; }
+    100% { width: 60%; }
+  }
+
+  .three {
+    background: 
+      /* radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0), */
+      conic-gradient(rgb(16, 154, 37) , rgb(34, 219, 17) 0);
+    animation: three 2s 1 forwards;
+  }
+  
+  .three::before {
+    animation: three 2s 1 forwards;
+  }
+  @keyframes two {
+    0% { width: 0; }
+    100% { width: 30%; }
+  }
+
+  .two {
+    background: 
+      /* radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0), */
+      conic-gradient(rgb(16, 154, 37) , rgb(225, 180, 33) 0);
+    animation: two 2s 1 forwards;
+  }
+  
+  .two::before {
+    animation: two 2s 1 forwards;
+  }
+  @keyframes one {
+    0% { width: 0; }
+    100% { width: 20%; }
+  }
+
+  .one {
+    background: 
+      /* radial-gradient(closest-side, white 79%, transparent 80% 100%, white 0), */
+      conic-gradient(rgb(16, 154, 37) , rgb(209, 11, 11) 0);
+    animation: one 2s 1 forwards;
+  }
+  
+  .one::before {
+    animation: one 2s 1 forwards;
+  }
+  .lines {
+    display: flex;
+    /* padding: 10px; */
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+  }
